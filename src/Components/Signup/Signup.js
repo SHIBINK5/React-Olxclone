@@ -3,7 +3,7 @@ import React, { useState,useContext } from 'react';
 import Logo from '../../olx-logo.png';
 import './Signup.css';
 import { FirebaseContext } from '../../store/Context';
-import {useHistory} from 'react-router-dom'
+import {useHistory,Link,NavLink} from 'react-router-dom'
 
 export default function Signup() {
   const [username, setUsername] = useState('')
@@ -84,7 +84,9 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        <a>Login</a>
+        <NavLink to='/login'>Login</NavLink>
+        {/* <link to='/login'>Login</link> */}
+        {/* <a >Login</a> */}
       </div>
     </div>
   );
